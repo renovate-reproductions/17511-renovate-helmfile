@@ -4,13 +4,13 @@ Renovate reproduction
 
 Escaped helm templates are wrongly replaced, so yaml parsing fails
 
-```
+```yaml
 namespace: {{`"{{request.object.metadata.name}}"`}}
 ```
 
 is replaced to
 
-```
+```yaml
 namespace: "`}}
 ```
 
